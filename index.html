@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <div class="weather-card">
+        <header class="weather-header">
+          <div>
+            <p class="brand">Weather App</p>
+            <h1>Check the weather anywhere</h1>
+          </div>
+        </header>
+
+        <div class="search-box">
+          <input
+            type="text"
+            id="city"
+            placeholder="Enter city or state (e.g. Texas, US)"
+            autocomplete="off"
+          />
+          <button id="searchBtn" aria-label="Search weather">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+
+        <div class="output-panel hidden" id="weatherInfo">
+          <div class="top-row">
+            <div>
+              <h2 id="location">New York</h2>
+              <p id="date">Monday, June 12, 2023</p>
+              <p id="time">12:00 PM</p>
+            </div>
+            <button class="refresh-btn" id="refreshBtn" title="Refresh weather">
+              <i class="fa-solid fa-arrows-rotate"></i>
+            </button>
+          </div>
+
+          <div class="weather-main">
+            <div class="weather-icon" id="weatherIcon">
+              <i class="fa-solid fa-cloud-sun"></i>
+            </div>
+            <div class="temperature">
+              <span id="temp">24</span>
+              <span class="unit">°C</span>
+            </div>
+          </div>
+
+          <p class="description" id="description">Clear sky</p>
+
+          <div class="weather-details">
+            <div>
+              <span>Humidity</span>
+              <strong id="humidity">60%</strong>
+            </div>
+            <div>
+              <span>Wind</span>
+              <strong id="wind">12 km/h</strong>
+            </div>
+            <div>
+              <span>Feels like</span>
+              <strong id="feelsLike">26°C</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="error-box hidden" id="errorBox"></div>
+      </div>
+    </div>
+  </body>
+</html>
